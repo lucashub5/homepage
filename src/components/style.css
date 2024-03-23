@@ -127,7 +127,6 @@ header {
     width: 100%;
     font-size: 17px;
     font-weight: 500;
-
 }
 
 .text-header {
@@ -154,16 +153,16 @@ header {
     height: 35px;
     animation: 1s slide infinite alternate;
     position: relative;
-    top: -2%;
+    top: -4%;
 }
 
 @keyframes slide {
     from {
-        top: -2%;
+        top: -4%;
     }
   
     to {
-      top: 2%;
+      top: 0%;
     }
 }
 
@@ -207,6 +206,7 @@ h3 {
     height: 200px;
     background: rgb(196, 196, 196);
     overflow: hidden;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 #skills span {
