@@ -23,6 +23,7 @@ document.body.innerHTML = `<div class="cont-main">
 </nav>
 <main>
     <header id="home">
+        <div></div>
         <div class="text-header">
             <p>Hey!</p>
             <div class="cont-desc-header">
@@ -55,28 +56,28 @@ document.body.innerHTML = `<div class="cont-main">
     <section id="projects">
         <h2>#PROJECTS</h2>
         <div class="cont-projs">
-            <div clas="proj-module">
+            <div class="proj-module">
                 <h3>Binary-Search-Trees</h3>
                 <div class="img-proj">
                     <img src="${BstImg}">
                 </div>
                 <p>Data structures. Implementation of a binary tree with binary search methods, insertion, deletion, rebalancing.</p>
             </div>
-            <div clas="proj-module">
+            <div class="proj-module">
                 <h3>Knights-Travails</h3>
                 <div class="img-proj">
                     <img src="${KtImg}">
                 </div>
                 <p>Data structure. Implementation of graphs to search for potential shortest paths for a knight on a chessboard.</p>
             </div>
-            <div clas="proj-module">
+            <div class="proj-module">
                 <h3>Battleship</h3>
                 <div class="img-proj">
                     <img src="${BsImg}">
                 </div>
                 <p>Abstraction and encapsulation. Implementation of classes to develop the logic of a naval battle game.</p>
             </div>
-            <div clas="proj-module">
+            <div class="proj-module">
                 <h3>Todo-list</h3>
                 <div class="img-proj">
                     <img src="${TlImg}">
@@ -190,13 +191,18 @@ window.addEventListener('scroll', function() {
     const vhHeight = window.innerHeight;
     const position = textHeaderInfo.top / vhHeight;
     let scale = 1;
-    if (position > 0.3) {
+    console.log('position ' + position);
+    if (position > 0) {
         scale = 1;
     } else if (position < 0.99) {
         scale = 1 + (1 * (0.5 - position));
+
+        if (scale > 2) {
+            scale = 2;
+        }
     }
     textHeader.style.transform = `scale(${scale})`;
-
+    console.log('scale ' + scale);
     //Effect 2
     var sections = document.querySelectorAll('section');
     sections.forEach(function(section) {
